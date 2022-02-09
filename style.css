@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root {
+    /* #Font 
+    Inter   : 400, 700
+    Lexend  : 400  */
+    --fontInter: 'Inter', sans-serif;
+    --fontLexend: 'Lexend Deca', sans-serif;
+    /* Color Used */
+    --colorDarkerBlue: hsl(233, 47%, 7%);
+    --colorLighterBlue: hsl(244, 38%, 16%);
+    --colorViolet: hsl(277, 64%, 61%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--colorDarkerBlue);
+    color: #fff;
+    font-family: var(--fontLexend);
+}
+
+p {
+    font-family: var(--fontInter);
+}
+
+strong {
+    color: var(--colorViolet);
+}
+
+.container {
+    background-color: var(--colorLighterBlue);
+    margin: 100px;
+    /* padding: 50px 0; */
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.text {
+    flex-basis: 50%;
+    margin: 50px 0 50px 50px;
+    padding-right: 50px;
+}
+
+.stats {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.counted {}
+
+.image {
+    flex-basis: 50%;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cover {}
+
+@media screen and (max-width:375px) {
+    .container {
+        margin: 5%;
+        padding: 10%;
+        flex-direction: column-reverse;
+    }
+}

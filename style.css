@@ -24,8 +24,25 @@ body {
     font-family: var(--fontLexend);
 }
 
+h2 {
+    font-family: var(--fontLexend);
+    font-weight: 700;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-family: var(--fontInter);
+    font-weight: 400;
+    padding: 5px 0;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
 p {
     font-family: var(--fontInter);
+    margin-top: 10px;
+    line-height: 1.5;
+    opacity: 0.7;
 }
 
 strong {
@@ -34,8 +51,8 @@ strong {
 
 .container {
     background-color: var(--colorLighterBlue);
-    margin: 100px;
-    /* padding: 50px 0; */
+    margin: 200px;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     height: auto;
@@ -53,21 +70,69 @@ strong {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.counted {}
+.counted {
+    margin: 10px;
+}
 
 .image {
     flex-basis: 50%;
     background-image: url(./images/image-header-desktop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    filter: sepia(60%) brightness(80%) hue-rotate(240deg) saturate(500%) opacity(60%) contrast(90%);
+    -webkit-filter: sepia(60%) brightness(80%) hue-rotate(240deg) saturate(500%) opacity(60%) contrast(90%);
+    -moz-filter: sepia(60%) brightness(80%) hue-rotate(240deg) saturate(500%) opacity(60%) contrast(90%);
+    border-radius: 0 10px 10px 0;
 }
 
-.cover {}
+img {
+    display: none;
+}
 
-@media screen and (max-width:375px) {
+@media screen and (min-width:375px) and (max-width:500px) {
     .container {
         margin: 5%;
-        padding: 10%;
+        display: flex;
         flex-direction: column-reverse;
+    }
+    .stats {
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .text {
+        text-align: center;
+        margin: 0;
+        padding: 40px;
+    }
+    .image {
+        border-radius: 10px 10px 0 0;
+    }
+    img {
+        border-radius: 10px 10px 0 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:700px) {
+    .container {
+        margin: 10%;
+        flex-direction: column-reverse;
+    }
+    .stats {
+        margin-top: 50px;
+    }
+    .text {
+        margin: 0;
+        padding: 40px;
+    }
+    .image {
+        border-radius: 10px 10px 0 0;
+    }
+    img {
+        border-radius: 10px 10px 0 0;
+        display: block;
+        width: 100%;
     }
 }
